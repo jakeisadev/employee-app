@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #fcfcfc;
+    font-family: 'Roboto', sans-serif;
+}
 .title {
-    padding-left: 3.2em;
+    padding-left: 1em;
     margin-top: 2em;
     font-size: 48px;
 }
@@ -17,12 +21,13 @@
 }
 .grid-item {
     display: flex;
+    background-color: #ffffff;
     width: 95%;
     text-align: center;
     align-items: center;
     justify-content: space-around;
     padding: 2rem;
-    border: 2px solid gray;
+    border: 6px solid #dfdfdf;
     border-radius: 5px;
     margin: 1.5rem;
 }
@@ -34,7 +39,7 @@
     margin-top: 1rem;
 }
 .info-text h1 {
-    color: black;
+    color: #4a4a4a;
     white-space: nowrap;
     text-align: left;
     width: 100%;
