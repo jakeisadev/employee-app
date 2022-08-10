@@ -15,17 +15,14 @@ fetch(url)
         const city = person.location.city;
 
         output += `
-        <div class="persons">
-            <div class="container"
-                <div class="img-box">
-                    <img src="${img}">
-                </div>
-                <div class="info-flex">
-                    <h1>${firstName + ' ' + lastName}
+            <div class="grid-item">
+                    <img src="${img}" class="circle">
+                <div class="info-text">
+                    <h1>${firstName + ' ' + lastName}</h1>
                     <p class="person-text">${email}</p>
                     <p class="person-text">${city}</p>
                 </div>
-            </div>
-        </div`;
+            </div>`;
     });
+    document.getElementById("persons").innerHTML = output;
   });
