@@ -1,12 +1,13 @@
 let employees = [];
+let selectedIndex = 0;
 let url = 'https://randomuser.me/api/?results=12&nat=us&inc=name,picture,email,location,cell,dob';
 let output = '' //Variable to hold the dynamic HTML content
 
 fetch(url)
   .then((res) => res.json())
   .then((data) => {
-    data.results.forEach((person) => {
-        
+    data.results.forEach((person, index) => {
+        console.log(person);
         const img = person.picture.large;
         const phone = person.cell;
         const firstName = person.name.first;
@@ -15,7 +16,7 @@ fetch(url)
         const city = person.location.city;
 
         output += `
-            <div class="grid-item">
+            <div class="grid-item" id="person">
                     <img src="${img}" class="circle">
                 <div class="info-text">
                     <h1>${firstName + ' ' + lastName}</h1>
@@ -23,6 +24,8 @@ fetch(url)
                     <p class="person-text">${city}</p>
                 </div>
             </div>`;
+
+              
     });
     document.getElementById("persons").innerHTML = output;
   });
