@@ -68,3 +68,39 @@ input {
     border-radius: 50%;
 }
 /* Modal CSS */
+.modal-overlay {
+    /* shouldn't appear by default */
+    display: none;
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index:1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.5);
+    padding-top:30em;
+
+}   
+
+.modal-content {
+    background-color: white;
+    border: 6px solid #dfdfdf;
+    border-radius: 15px;
+    width: 30%;
+    height: 65%;
+    margin: auto;
+}
+
+.close-div {
+    display:flex;
+    justify-content:right;
+}
+
+.close {
+    font-size: 32px;
+    font-weight:bold;
+    margin: 10px 15px 0px 0px;
+}
+.close:hover {
+    cursor: pointer;
+}
