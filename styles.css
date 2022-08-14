@@ -223,11 +223,12 @@ input {
     }
     .info-text p {
         text-align: center;
-        font-size: 1.1rem;
+        font-size: .9rem;
     }
     .title {
         text-align: center;
         font-size: 24px;
+        padding-left: .5rem;
     }
     .modal-overlay {
         padding-top: 5em;
@@ -259,6 +260,99 @@ input {
     .modal-content {
         width: 70%;
         height: 80%;
+    }
+    .arrows {
+        padding-right: 2rem;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    #persons {
+        grid-template-columns: repeat(2, 1fr);
+        /* justify-content: center; */
+        margin: auto;
+    }
+    .grid-item {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .grid-item img,
+    .circle,
+    #myModal-content .employee-img {
+        width: 100px;
+        height: 100px;
+    }
+    input.searchbox {
+        width: 80%;
+        height: 40px;
+        text-align: center;
+        margin: auto;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: auto;
+        width: 100%;
+    }
+    .info-text {
+        width: 100%;
+        text-align: center;
+    }
+    .info-text h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    .info-text p {
+        text-align: center;
+        font-size: .9rem;
+        padding-right: .8rem;
+    }
+    .title {
+        text-align: center;
+        font-size: 24px;
+        padding-left: .5rem;
+    }
+    .input-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+    }
+    /* Modal Query */
+    #myModal-content {
+        align-items: center;
+        padding-top: 0;
+        margin-top: -1rem;
+    }
+    #myModal-content h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #myModal-content p.email,
+    #myModal-content p.city,
+    #myModal-content p.number,
+    #myModal-content p.address,
+    #myModal-content p.birthday {
+    padding-top: .5rem;
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+    }
+    #myModal-content p.email,
+    #myModal-content p.city {
+        padding-top: 1.5rem;
+    }
+    .modal-content {
+        width: 70%;
+        max-height: 75%;
+    }
+    .modal-overlay {
+        padding-top: 4em;
     }
     .arrows {
         padding-right: 2rem;
