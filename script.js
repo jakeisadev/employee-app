@@ -4,65 +4,65 @@ let selectedIndex = 0;
 let url = 'https://randomuser.me/api/?results=12&nat=us&inc=name,picture,email,location,cell,dob';
 let output = '' //Variable to hold the dynamic HTML content
 
-const states = [
-  { name: 'alabama', abbr: 'AL'},
-  { name: 'alaska', abbr: 'AK'},
-  { name: 'american samoa', abbr: 'AS'},
-  { name: 'arizona', abbr: 'AZ'},
-  { name: 'arkansas', abbr: 'AR'},
-  { name: 'california', abbr: 'CA'},
-  { name: 'colorado', abbr: 'CO'},
-  { name: 'connecticut', abbr: 'CT'},
-  { name: 'delaware', abbr: 'DE'},
-  { name: 'district of columbia', abbr: 'DC'},
-  { name: 'florida', abbr: 'FL'},
-  { name: 'georgia', abbr: 'GA'},
-  { name: 'guam', abbr: 'GU'},
-  { name: 'hawaii', abbr: 'HI'},
-  { name: 'idaho', abbr: 'ID'},
-  { name: 'illinois', abbr: 'IL'},
-  { name: 'indiana', abbr: 'IN'},
-  { name: 'iowa', abbr: 'IA'},
-  { name: 'kansas', abbr: 'KS'},
-  { name: 'kentucky', abbr: 'KY'},
-  { name: 'louisiana', abbr: 'LA'},
-  { name: 'maine', abbr: 'ME'},
-  { name: 'marshall islands', abbr: 'MH'},
-  { name: 'maryland', abbr: 'MD'},
-  { name: 'massachusetts', abbr: 'MA'},
-  { name: 'michigan', abbr: 'MI'},
-  { name: 'minnesota', abbr: 'MN'},
-  { name: 'mississippi', abbr: 'MS'},
-  { name: 'missouri', abbr: 'MO'},
-  { name: 'montana', abbr: 'MT'},
-  { name: 'nebraska', abbr: 'NE'},
-  { name: 'nevada', abbr: 'NV'},
-  { name: 'new hampshire', abbr: 'NH'},
-  { name: 'new jersey', abbr: 'NJ'},
-  { name: 'new mexico', abbr: 'NM'},
-  { name: 'new york', abbr: 'NY'},
-  { name: 'north carolina', abbr: 'NC'},
-  { name: 'north dakota', abbr: 'ND'},
-  { name: 'northern mariana islands', abbr: 'NP'},
-  { name: 'ohio', abbr: 'OH'},
-  { name: 'oklahoma', abbr: 'OK'},
-  { name: 'oregon', abbr: 'OR'},
-  { name: 'pennsylvania', abbr: 'PA'},
-  { name: 'puerto rico', abbr: 'PR'},
-  { name: 'rhode island', abbr: 'RI'},
-  { name: 'south carolina', abbr: 'SC'},
-  { name: 'south dakota', abbr: 'SD'},
-  { name: 'tennessee', abbr: 'TN'},
-  { name: 'texas', abbr: 'TX'},
-  { name: 'us virgin islands', abbr: 'VI'},
-  { name: 'utah', abbr: 'UT'},
-  { name: 'vermont', abbr: 'VT'},
-  { name: 'virginia', abbr: 'VA'},
-  { name: 'washington', abbr: 'WA'},
-  { name: 'west virginia', abbr: 'WV'},
-  { name: 'wisconsin', abbr: 'WI'},
-  { name: 'wyoming', abbr: 'WY'}
-];
+// const states = [
+//   { name: 'alabama', abbr: 'AL'},
+//   { name: 'alaska', abbr: 'AK'},
+//   { name: 'american samoa', abbr: 'AS'},
+//   { name: 'arizona', abbr: 'AZ'},
+//   { name: 'arkansas', abbr: 'AR'},
+//   { name: 'california', abbr: 'CA'},
+//   { name: 'colorado', abbr: 'CO'},
+//   { name: 'connecticut', abbr: 'CT'},
+//   { name: 'delaware', abbr: 'DE'},
+//   { name: 'district of columbia', abbr: 'DC'},
+//   { name: 'florida', abbr: 'FL'},
+//   { name: 'georgia', abbr: 'GA'},
+//   { name: 'guam', abbr: 'GU'},
+//   { name: 'hawaii', abbr: 'HI'},
+//   { name: 'idaho', abbr: 'ID'},
+//   { name: 'illinois', abbr: 'IL'},
+//   { name: 'indiana', abbr: 'IN'},
+//   { name: 'iowa', abbr: 'IA'},
+//   { name: 'kansas', abbr: 'KS'},
+//   { name: 'kentucky', abbr: 'KY'},
+//   { name: 'louisiana', abbr: 'LA'},
+//   { name: 'maine', abbr: 'ME'},
+//   { name: 'marshall islands', abbr: 'MH'},
+//   { name: 'maryland', abbr: 'MD'},
+//   { name: 'massachusetts', abbr: 'MA'},
+//   { name: 'michigan', abbr: 'MI'},
+//   { name: 'minnesota', abbr: 'MN'},
+//   { name: 'mississippi', abbr: 'MS'},
+//   { name: 'missouri', abbr: 'MO'},
+//   { name: 'montana', abbr: 'MT'},
+//   { name: 'nebraska', abbr: 'NE'},
+//   { name: 'nevada', abbr: 'NV'},
+//   { name: 'new hampshire', abbr: 'NH'},
+//   { name: 'new jersey', abbr: 'NJ'},
+//   { name: 'new mexico', abbr: 'NM'},
+//   { name: 'new york', abbr: 'NY'},
+//   { name: 'north carolina', abbr: 'NC'},
+//   { name: 'north dakota', abbr: 'ND'},
+//   { name: 'northern mariana islands', abbr: 'NP'},
+//   { name: 'ohio', abbr: 'OH'},
+//   { name: 'oklahoma', abbr: 'OK'},
+//   { name: 'oregon', abbr: 'OR'},
+//   { name: 'pennsylvania', abbr: 'PA'},
+//   { name: 'puerto rico', abbr: 'PR'},
+//   { name: 'rhode island', abbr: 'RI'},
+//   { name: 'south carolina', abbr: 'SC'},
+//   { name: 'south dakota', abbr: 'SD'},
+//   { name: 'tennessee', abbr: 'TN'},
+//   { name: 'texas', abbr: 'TX'},
+//   { name: 'us virgin islands', abbr: 'VI'},
+//   { name: 'utah', abbr: 'UT'},
+//   { name: 'vermont', abbr: 'VT'},
+//   { name: 'virginia', abbr: 'VA'},
+//   { name: 'washington', abbr: 'WA'},
+//   { name: 'west virginia', abbr: 'WV'},
+//   { name: 'wisconsin', abbr: 'WI'},
+//   { name: 'wyoming', abbr: 'WY'}
+// ];
 
 const openModal = (id) => {
 
@@ -147,23 +147,23 @@ fetch(url)
     }
 
     // Event listener for arrow clicks
-document.getElementById('modal').addEventListener('click', (e) => {
-
-  if (e.target.className === 'arrow-left') {
-      if (selectedIndex === 0) {
-          // return openModal(employees[employees.length - 1]);
+    document.getElementById('modal').addEventListener('click', (e) => {
+    
+      if (e.target.className === 'arrow-left') {
+          if (selectedIndex === 0) {
+              // return openModal(employees[employees.length - 1]);
+          }
+        
+          // return openModal(employees[selectedIndex - 1]);
       }
-
-      // return openModal(employees[selectedIndex - 1]);
-  }
-  if (e.target.className === 'arrow-right') {
-      if (selectedIndex === employees.length - 1) {
-          return openModal(employees[0]);
+      if (e.target.className === 'arrow-right') {
+          if (selectedIndex === employees.length - 1) {
+              return openModal(employees[0]);
+          }
+        
+          // return openModal(employees[selectedIndex + 1]);
       }
-
-      // return openModal(employees[selectedIndex + 1]);
-  }
-});
+    });
 
 });
 
