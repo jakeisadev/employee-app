@@ -155,3 +155,8 @@ input {
     margin-top: 2.5rem;
     margin-left: 1.5rem;
 }
+
+.arrow-left:hover,
+.arrow-right:hover {
+    cursor: pointer;
+}

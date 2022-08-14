@@ -68,6 +68,7 @@ const openModal = (id) => {
 
   let dob = employees[id].dob.date;
   let birthday = convertBDay(dob);
+  console.log(birthday);
 
   document.getElementById("modal").style.display = "block";
 
@@ -144,6 +145,25 @@ fetch(url)
         modal.style.display = "none"
       }
     }
+
+    // Event listener for arrow clicks
+document.getElementById('modal').addEventListener('click', (e) => {
+
+  if (e.target.className === 'arrow-left') {
+      if (selectedIndex === 0) {
+          // return openModal(employees[employees.length - 1]);
+      }
+
+      // return openModal(employees[selectedIndex - 1]);
+  }
+  if (e.target.className === 'arrow-right') {
+      if (selectedIndex === employees.length - 1) {
+          return openModal(employees[0]);
+      }
+
+      // return openModal(employees[selectedIndex + 1]);
+  }
+});
 
 });
 
