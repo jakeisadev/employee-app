@@ -151,17 +151,17 @@ fetch(url)
     
       if (e.target.className === 'arrow-left') {
           if (selectedIndex === 0) {
-              // return openModal(employees[employees.length - 1]);
+              return openModal(employees[employees.length - 1]);
           }
         
-          // return openModal(employees[selectedIndex - 1]);
+          return openModal(employees[selectedIndex - 1]);
       }
       if (e.target.className === 'arrow-right') {
           if (selectedIndex === employees.length - 1) {
               return openModal(employees[0]);
           }
         
-          // return openModal(employees[selectedIndex + 1]);
+          return openModal(employees[selectedIndex + 1]);
       }
     });
 
