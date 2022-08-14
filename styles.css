@@ -167,6 +167,8 @@ input {
         display: block;
         text-align: center;
         margin: auto;
+        margin-top: 2rem;
+        font-size: 1.5rem;
     }
     .search-box {
         display: flex;
@@ -203,8 +205,8 @@ input {
     .grid-item img,
     .circle,
     #myModal-content .employee-img {
-        width: 60%;
-        height: 60%;
+        width: 110px;
+        height: 110px;
     }
     .person-text {
         text-align: center;
@@ -224,15 +226,41 @@ input {
         font-size: 1.1rem;
     }
     .title {
+        text-align: center;
         font-size: 24px;
     }
     .modal-overlay {
-        padding-top: 15em;
+        padding-top: 5em;
     }
     /* Modal Query */
     #myModal-content {
-        width: 100%;
-        height: 100%;
+        align-items: center;
         padding-top: 0;
+        margin-top: -1rem;
+    }
+    #myModal-content h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #myModal-content p.email,
+    #myModal-content p.city,
+    #myModal-content p.number,
+    #myModal-content p.address,
+    #myModal-content p.birthday {
+    padding-top: .5rem;
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+    }
+    #myModal-content p.email,
+    #myModal-content p.city {
+        padding-top: 1.5rem;
+    }
+    .modal-content {
+        width: 70%;
+        height: 80%;
+    }
+    .arrows {
+        padding-right: 2rem;
     }
 }
