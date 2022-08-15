@@ -211,6 +211,7 @@ input {
         border: 6px solid #dfdfdf;
         border-radius: 5px;
         margin: 1.5rem;
+        width: 90%;
     }
     .grid-item img,
     .circle,
@@ -221,9 +222,6 @@ input {
     .person-text {
         text-align: center;
         font-size: 1.2rem;
-    }
-    .info-text {
-        width: 100%;
     }
     .info-text h1 {
         font-size: 1.5rem;
