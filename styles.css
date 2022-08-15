@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 /* Main CSS */
 body {
@@ -194,7 +194,7 @@ input {
     #persons {
         display: flex;
         flex-direction: column;
-        /* width: 100%; */
+        /* width: 95vw; */
         align-items: center;
         justify-items: center;
         justify-content: center;
@@ -280,6 +280,7 @@ input {
     #persons {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
+        width: 95%;
     }
     .grid-item {
         flex-direction: column;
@@ -287,12 +288,14 @@ input {
         padding: 0;
         margin: 0;
         margin-bottom: 1.5rem;
+        width: 90%;
     }
     .grid-item img,
     .circle,
     #myModal-content .employee-img {
         width: 100px;
         height: 100px;
+        margin-top: .5rem;
     }
     .email {
         white-space: nowrap;
@@ -324,6 +327,7 @@ input {
     .info-text p {
         text-align: center;
         font-size: .9rem;
+        margin-bottom: .2rem;
     }
     .title {
         text-align: center;
