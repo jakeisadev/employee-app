@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid red;
 }
 /* Main CSS */
 body {
@@ -35,13 +36,13 @@ input {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-items: center;
+    /* justify-items: center; */
     margin: 2rem;
 }
 .grid-item {
     display: flex;
     background-color: #ffffff;
-    width: 95%;
+    /* width: 95%; */
     text-align: center;
     align-items: center;
     justify-content: space-around;
@@ -55,9 +56,7 @@ input {
 }
 .info-text {
     font-size: 1.7rem;
-    width: 50%;
     color: gray;
-    text-align: left;
     margin-top: 1rem;
 }
 .info-text h1 {
@@ -89,12 +88,22 @@ input {
     padding-top:20em;
 
 }
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    vertical-align: middle;
+    width: 100vw;
+    margin: auto;
+}
 #myModal-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 3em;
+    position: relative;
 }
 #myModal-content .employee-img {
     width: 350px;
@@ -187,6 +196,7 @@ input {
         flex-direction: column;
         /* width: 100%; */
         align-items: center;
+        justify-items: center;
         justify-content: center;
         overflow: hidden;
     }
@@ -238,6 +248,8 @@ input {
         align-items: center;
         padding-top: 0;
         margin-top: -1rem;
+        overflow: none;
+        position: relative;
     }
     #myModal-content h1 {
         font-size: 1.5rem;
@@ -258,8 +270,9 @@ input {
         padding-top: 1.5rem;
     }
     .modal-content {
-        width: 70%;
-        height: 80%;
+        width: 85vw;
+        height: 85vh;
+        margin: auto;
     }
     .arrows {
         padding-right: 2rem;
@@ -268,19 +281,23 @@ input {
 @media (min-width: 481px) and (max-width: 768px) {
     #persons {
         grid-template-columns: repeat(2, 1fr);
-        /* justify-content: center; */
-        margin: auto;
+        justify-content: center;
     }
     .grid-item {
         flex-direction: column;
         margin-bottom: 1rem;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1.5rem;
     }
-
     .grid-item img,
     .circle,
     #myModal-content .employee-img {
         width: 100px;
         height: 100px;
+    }
+    .email {
+        white-space: nowrap;
     }
     input.searchbox {
         width: 80%;
@@ -309,7 +326,6 @@ input {
     .info-text p {
         text-align: center;
         font-size: .9rem;
-        padding-right: .8rem;
     }
     .title {
         text-align: center;
@@ -325,9 +341,13 @@ input {
     }
     /* Modal Query */
     #myModal-content {
-        align-items: center;
+        /* align-items: center;
         padding-top: 0;
         margin-top: -1rem;
+        position: relative; */
+        width: 85vw;
+        height: 67vh;
+        margin: auto;
     }
     #myModal-content h1 {
         font-size: 1.5rem;
@@ -348,8 +368,9 @@ input {
         padding-top: 1.5rem;
     }
     .modal-content {
-        width: 70%;
-        max-height: 75%;
+        width: 85vw;
+        height: 85vh;
+        margin: auto;
     }
     .modal-overlay {
         padding-top: 4em;
