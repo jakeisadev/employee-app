@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 /* Main CSS */
 body {
@@ -316,7 +316,7 @@ input {
         width: 100%;
     }
     .info-text {
-        width: 100%;
+        /* width: 100%; */
         text-align: center;
     }
     .info-text h1 {
