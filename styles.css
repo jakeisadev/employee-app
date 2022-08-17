@@ -9,74 +9,57 @@ body {
     background-color: #fcfcfc;
     font-family: 'Roboto', sans-serif;
 }
+/* Mobile First CSS */
 .search-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.title {
-    padding-left: 1em;
-    margin-top: 2em;
-    font-size: 48px;
-}
-/* .input-div {
-    width: 800px;
-    height: 100px;
-    margin: auto;
-} */
-input {
-    width: 800px;
-    height: 70px;
-    padding: .5rem;
-    font-size: 2rem;
-    margin-top: 7rem;
-    margin-right: 4.5rem;
-} 
-#persons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    /* justify-items: center; */
-    margin: 2rem;
-}
-.grid-item {
-    display: flex;
-    background-color: #ffffff;
-    /* width: 95%; */
     text-align: center;
+    margin-bottom: 1.5rem;
+}
+.search-box .title {
+    padding-top: 1.5rem;
+}
+.search-box .input-div {
+    margin-top: 1.5rem;
+}
+.search-box .searchbox {
+    height: 50px;
+    font-size: 20px;
+}
+#persons {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 2rem;
+}
+#persons .grid-item {
+    margin-bottom: 1.5rem;
+    width: 70%;
+    text-align: center;
     border: 6px solid #dfdfdf;
     border-radius: 5px;
-    margin: 1.5rem;
 }
-.grid-item:hover {
-    cursor: pointer;
-}
-.info-text {
-    font-size: 1.7rem;
-    color: gray;
-    margin-top: 1rem;
-}
-.info-text h1 {
-    color: #4a4a4a;
-    white-space: nowrap;
-    text-align: left;
-    width: 100%;
-}
-.person-text {
-    margin-top: .8rem;
-    font-size: 2rem;
-}
-.circle {
-    width: 250px;
-    height: 250px;
+#persons .grid-item img {
     border-radius: 50%;
+    margin: .6em 0 .4em 0;
+    background-color: #ffffff;
 }
-/* Modal CSS */
+#persons .grid-item .info-text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+#persons .grid-item .info-text h1 {
+    padding-top: .3em;
+    font-size: 1.5rem;
+}
+#persons .grid-item .info-text h1,
+#persons .grid-item .info-text .person-text {
+    padding-bottom: .5em;
+}
+#persons .grid-item .info-text .person-text {
+    font-size: .9rem;
+}
+/* Mobile First Modal CSS */
 .modal-overlay {
-    /* shouldn't appear by default */
     display: none;
     position: fixed;
     width:100%;
@@ -88,296 +71,21 @@ input {
     padding-top:20em;
 
 }
-.modal-container {
+ .modal-container {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     vertical-align: middle;
-    width: 100vw;
-    margin: auto;
-}
-#myModal-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3em;
-    position: relative;
-}
-#myModal-content .employee-img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-}
-#myModal-content h1 {
-    padding-top: 1em;
-    font-size: 2.5rem;
-}
-#myModal-content p.email,
-#myModal-content p.city,
-#myModal-content p.number,
-#myModal-content p.address,
-#myModal-content p.birthday {
-    padding-top: 1em;
-    color: gray;
-    font-size: 2rem;
-}
-#myModal-content hr {
-    height: 4px;
-    margin-top: 4em;
-    margin-bottom: 3em;
-    color: #4a4a4a;
-    background-color: #4a4a4a;
-    width: 80%;
+    width: 50%;
 }
 .modal-content {
-    background-color: white;
-    border: 6px solid #dfdfdf;
-    border-radius: 15px;
-    width: 28%;
-    height: 75%;
-    margin: auto;
+    width: 50%;
 }
-.close-div {
-    display:flex;
-    justify-content: right;
-}
-.close {
-    font-size: 3em;
-    font-weight: bold;
-    margin: 10px 15px 0px 0px;
-}
-.close:hover {
-    cursor: pointer;
-}
-.arrows {
+#close-btn {
     display: flex;
-    justify-content: center;
-    padding-left: 1rem;
+    justify-content: flex-end;
 }
-
-.arrow-left,
-.arrow-right {
-    width: 70px;
-    height: 70px;
-    margin-top: 2.5rem;
-    margin-left: 1.5rem;
-}
-
-.arrow-left:hover,
-.arrow-right:hover {
-    cursor: pointer;
-}
-/* MEDIA QUERIES */
-@media (min-width: 320px) and (max-width: 480px) {
-    input.searchbox {
-        width: 80%;
-        display: block;
-        text-align: center;
-        margin: auto;
-        margin-top: 2rem;
-        font-size: 1.5rem;
-    }
-    .search-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
-        width: 100%;
-    }
-    .input-div {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-    }
-    #persons {
-        display: flex;
-        flex-direction: column;
-        /* width: 95vw; */
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-    .grid-item {
-        display: flex;
-        flex-direction: column;
-        background-color: #ffffff;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        border: 6px solid #dfdfdf;
-        border-radius: 5px;
-        margin: 1.5rem;
-        width: 90%;
-    }
-    .grid-item img,
-    .circle,
-    #myModal-content .employee-img {
-        width: 110px;
-        height: 110px;
-    }
-    .person-text {
-        text-align: center;
-        font-size: 1.2rem;
-    }
-    .info-text h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        width: 100%;
-        word-wrap: break-word;
-    }
-    .info-text p {
-        text-align: center;
-        font-size: .9rem;
-    }
-    .title {
-        text-align: center;
-        font-size: 24px;
-        padding-left: .5rem;
-    }
-    .modal-overlay {
-        padding-top: 5em;
-    }
-    /* Modal Query */
-    #myModal-content {
-        align-items: center;
-        padding-top: 0;
-        margin-top: -1rem;
-        overflow: none;
-        position: relative;
-    }
-    #myModal-content h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    #myModal-content p.email,
-    #myModal-content p.city,
-    #myModal-content p.number,
-    #myModal-content p.address,
-    #myModal-content p.birthday {
-    padding-top: .5rem;
-    font-size: 1rem;
-    color: gray;
-    text-align: center;
-    }
-    #myModal-content p.email,
-    #myModal-content p.city {
-        padding-top: 1.5rem;
-    }
-    .modal-content {
-        width: 85vw;
-        height: 85vh;
-        margin: auto;
-    }
-    .arrows {
-        padding-right: 2rem;
-    }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-    #persons {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        width: 95%;
-    }
-    .grid-item {
-        flex-direction: column;
-        margin-bottom: 1rem;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 1.5rem;
-        width: 90%;
-    }
-    .grid-item img,
-    .circle,
-    #myModal-content .employee-img {
-        width: 100px;
-        height: 100px;
-        margin-top: .5rem;
-    }
-    .email {
-        white-space: nowrap;
-    }
-    input.searchbox {
-        width: 80%;
-        height: 40px;
-        text-align: center;
-        margin: auto;
-        margin-top: 2rem;
-        font-size: 1.5rem;
-    }
-    .search-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin: auto;
-        width: 100%;
-    }
-    .info-text {
-        /* width: 100%; */
-        text-align: center;
-    }
-    .info-text h1 {
-        font-size: 1.2rem;
-        text-align: center;
-        word-wrap: break-word;
-    }
-    .info-text p {
-        text-align: center;
-        font-size: .9rem;
-        margin-bottom: .2rem;
-    }
-    .title {
-        text-align: center;
-        font-size: 24px;
-        padding-left: .5rem;
-    }
-    .input-div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        width: 100%;
-    }
-    /* Modal Query */
-    #myModal-content {
-        /* align-items: center;
-        padding-top: 0;
-        margin-top: -1rem;
-        position: relative; */
-        width: 85vw;
-        height: 67vh;
-        margin: auto;
-    }
-    #myModal-content h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    #myModal-content p.email,
-    #myModal-content p.city,
-    #myModal-content p.number,
-    #myModal-content p.address,
-    #myModal-content p.birthday {
-    padding-top: .5rem;
-    font-size: 1rem;
-    color: gray;
-    text-align: center;
-    }
-    #myModal-content p.email,
-    #myModal-content p.city {
-        padding-top: 1.5rem;
-    }
-    .modal-content {
-        width: 85vw;
-        height: 85vh;
-        margin: auto;
-    }
-    .modal-overlay {
-        padding-top: 4em;
-    }
-    .arrows {
-        padding-right: 2rem;
-    }
-}
+/* End Mobile First Modal CSS */
+/* End Mobile First CSS */
