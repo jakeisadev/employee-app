@@ -91,10 +91,21 @@ body {
 .modal-content img {
     border-radius: 50%;
 }
+.modal-content .number,
+.modal-content .email {
+    margin-top: 1em;
+}
+.modal-content .address,
+.modal-content .birthday {
+    margin-top: .8em;
+}
+.modal-content .city {
+    margin-bottom: 1em;
+}
 .arrows {
     display: flex;
     justify-content: center;
-    margin-top: .5em;
+    margin-top: 1em;
 }
 .arrow-right,
 .arrow-left {
