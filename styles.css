@@ -24,6 +24,9 @@ body {
     height: 50px;
     font-size: 20px;
 }
+.search-box .searchbox::placeholder {
+    text-align: center;
+}
 #persons {
     display: flex;
     flex-direction: column;
@@ -86,7 +89,6 @@ body {
 .modal-content {
     text-align: center;
     position: relative;
-    max-width: 100%;
 }
 .modal-content img {
     border-radius: 50%;
@@ -105,16 +107,55 @@ body {
 .arrows {
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    margin: .5em;
 }
 .arrow-right,
 .arrow-left {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    padding: .5em;
 }
 #close-btn {
     display: flex;
     justify-content: flex-end;
+    margin: .5em .5em 0 0;
+    font-size: 1.5rem;
 }
 /* End Mobile First Modal CSS */
 /* End Mobile First CSS */
+
+/* Begin iPad/Tablet CSS */
+@media (min-width: 481px) and (max-width: 768px) {
+    #persons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .modal-container {
+        width: 50%;
+        height: 60%;
+    }
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+    }
+    .modal-content img.employee-img {
+        margin-bottom: 1.5em;
+    }
+    .modal-content p {
+        font-size: 1.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .arrows {
+        margin-bottom: 3em;
+    }
+    #close-btn {
+        margin: 1.5em .5em 0 0;
+        font-size: 2rem;
+    }
+}
+/* End iPad/Tablet CSS */
