@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
 }
 /* Main CSS */
 body {
@@ -38,6 +37,9 @@ body {
     text-align: center;
     border: 6px solid #dfdfdf;
     border-radius: 5px;
+}
+#persons .grid-item:hover {
+    cursor: pointer;
 }
 #persons .grid-item img {
     border-radius: 50%;
@@ -115,6 +117,10 @@ body {
     height: 60px;
     padding: .5em;
 }
+.arrow-right:hover,
+.arrow-left:hover {
+    cursor: pointer;
+}
 #close-btn {
     display: flex;
     justify-content: flex-end;
@@ -183,6 +189,9 @@ body {
     .modal-content img.employee-img {
         margin-bottom: 1.5em;
     }
+    #myModal-content h1 {
+        font-size: 1rem;
+    }
     .modal-content p {
         font-size: 1.1rem;
         white-space: nowrap;
@@ -199,7 +208,7 @@ body {
 /* End Laptop media query */
 
 /* Begin Desktop media query */
-@media (min-width: 1025px) and (max-width: 1300px) {
+@media (min-width: 1025px) and (max-width: 1625px) {
     .search-box {
         display: flex;
         justify-content: space-between;
@@ -209,7 +218,7 @@ body {
         margin-left: 1em;
     }
     .search-box .searchbox {
-        margin-right: 1em;
+        margin-right: 3em;
         padding-left: .5em;
     }
     .search-box .searchbox::placeholder {
