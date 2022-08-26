@@ -156,6 +156,9 @@ body {
         white-space: nowrap;
         overflow: hidden;
     }
+    #myModal-content h1 {
+        font-size: 1.5rem;
+    }
     .arrows {
         margin-bottom: 3em;
     }
